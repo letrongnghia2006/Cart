@@ -48,6 +48,8 @@ public class addToCart extends HttpServlet {
             session.setAttribute("cart", cart);
 
             url = "/Cart.jsp";
+        }else if(action.equals("download")){
+            url = "/index.jsp";
         }
 
         getServletContext().getRequestDispatcher(url)
